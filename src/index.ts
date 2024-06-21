@@ -1,10 +1,10 @@
-/* Este fragmento de código utiliza una expresión de función de invocación inmediata (IIFE) en
-TypeScript. */
-(()=> {
-    /* El código declara una variable constante `myName` de tipo `string` con el valor ``Nicolas''. Luego,
-    registra el valor de la variable `myName` en la consola. Todo el código está incluido en una
-    expresión de función invocada inmediatamente (IIFE) en TypeScript, lo que significa que la función
-    se ejecuta inmediatamente después de definirse. */
-        const myName: string = 'Nicolas';
-        console.log(myName);
-    })();
+import bookStore from './models/bookStore';
+import {book}from './models/book'
+
+const Library=new bookStore();
+const libro=new book (`Julio César`, `William Shakespeare`, `traedia`, `aleman`, `66.790`, `tapa blanda`, 9780133555387, `Recrea la conspiración en contra del dictador romano, su homicidio y sus secuelas, así como su lugar de desarrollo: la antigua Roma`, `nuevo`, `buscaLibre`, `1623` , `Penguin Random House`, 105, `12.5 x 19 cm`, `50 kg`, true);
+
+Library.addbook(libro);
+Library.Listbooks();
+
+

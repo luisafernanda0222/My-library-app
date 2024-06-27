@@ -1,7 +1,6 @@
 import {customer}from './customer';
 
 
-
 class methodCustomer{
 
     customers:customer[];

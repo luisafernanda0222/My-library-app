@@ -1,5 +1,4 @@
 import {book}from './book';
-import { customer } from './customer';
 
 class bookStore{
  books:book[];

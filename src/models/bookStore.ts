@@ -1,7 +1,8 @@
 import {book}from './book';
+import { customer } from './customer';
 
 class bookStore{
-    private books:book[];
+ books:book[];
 
 constructor(){
     this.books=[];
@@ -14,7 +15,7 @@ addbook(book:book):void{
     console.log(`libro'${book.titulo}' agrregar a la biblioteca.`);
 }
 
-// Metodo para eliminar una peliculade la biblioteca por titulo
+// Metodo para eliminar una pelicula de la biblioteca por titulo
 
 removebook(titulo:string):void {
     const index= this.books.findIndex(book => book.titulo===titulo);
@@ -35,7 +36,7 @@ Listbooks():void {
 
     }else {
         console.log('Libros en la biblioteca:');
-        this.books.forEach(book=>{console.log(`-titulo:${book.titulo}, autor: ${book.autor}, genero: ${book.genero}, idioma: ${book.idioma}, precio: ${book.precio}, formato: ${book.formato}, isbn: ${book.isbn}, descripcion: ${book.descripcion}, estado: ${book.estado}, ubicacion: ${book.ubicacion}, fecha_publicacion: ${book.fecha_publicacion},  editorial: ${book.editorial},paginas: ${book.paginas},  dimensiones: ${book.dimensiones}, peso: ${book.peso},  disponible: ${book.disponible},`)
+        this.books.forEach(book=>{console.log(`-titulo:${book.titulo}, autor: ${book.autor}, idioma: ${book.idioma}, precio: ${book.precio}, fecha_publicacion: ${book.fecha_publicacion}, paginas: ${book.paginas},  disponible: ${book.disponible},`)
         });
     }
 }
